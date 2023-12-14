@@ -1,0 +1,242 @@
+@font-face {
+    font-family: vazir;
+    src: url('/font/Vazir.ttf') format(truetype);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'vazir';
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    
+}
+body::-webkit-scrollbar{
+    width: 9PX;
+    background-color: #fff;
+    margin-right: 2px;
+}
+body::-webkit-scrollbar-thumb{
+    
+    background-color: rgb(117, 117, 117);
+    border-radius: 10px;
+}
+header{
+    width: 83%;
+    margin: 15px auto;
+}
+header .top{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 7px;
+    
+}
+header .top div{
+    max-width: 100%;
+    position: relative;
+    display:flex ;
+}
+header .top div input{
+    width: 100%;
+    padding:8px 10px;
+    border-radius:5px ;
+    outline: none;
+    border: 1px solid rgb(185, 183, 183);
+} 
+header .top div i{
+    font-size: 20px;
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+header .top .login{
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    outline: none;
+    border: 1px solid rgb(185, 183, 183);
+    border-radius: 5px;
+    cursor: pointer;
+}
+header .top .login i{
+    margin-left: 7px;   
+}
+header .battom {
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 18px;
+}
+header .battom .right{
+    display: flex;
+    align-items: center;
+}
+header .battom .right img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 7px;
+}
+header .battom .right .titel h2{
+    font-size: 16px;
+}
+header .battom .left{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+header .battom .left p{
+    background-color: rgb(255, 123, 0);
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* ********* */
+
+.sidbar{
+    width: 70px ;
+    height: 100vh;
+    box-shadow: -5px 0 5px lightgray;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.sidbar .container{
+    width: 100%;
+    height: 100%;
+}
+.sidbar .container .items{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+.sidbar .container .items .item{
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.sidbar .container .items .item:hover{
+    background-color: rgb(240, 240, 240);
+    color: orange;
+}
+
+
+.sidbar .container .items .item p{
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+.sidbar .container .items .item.playy{
+    width: 40px;
+    height: 40PX;
+    background-color: rgb(255, 94, 0);
+    padding: 10px;
+    clip-path: polygon(100.00% 50.00%,75.00% 93.30%,25.00% 93.30%,0.00% 50.00%,25.00% 6.70%,75.00% 6.70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+.sidbar .container .items .item.playy i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+/* ****** */
+
+section{
+    width: 83%;
+    margin: 15px auto;
+}
+section .dis{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .videos{
+    width: 100%;
+}
+section .videos .item{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 20px auto;
+}
+section .videos .item img{
+    width: 100%;
+    height: 200px;
+    border-radius: 7px; 
+    object-fit: cover;
+}
+section .videos .item img:hover{
+    box-shadow: 0 0 10px gray;
+}
+
+@media screen and (max-width:1000px){
+    header{
+        margin-right: 90px;
+    }
+    section{
+        margin-right: 90px;
+    }
+    section .videos .item{
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+
+    }
+   
+}
+
+@media screen and (max-width:850PX){
+    section .videos .item{
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    }
+
+}
+
+@media screen and (max-width:700PX){
+    header .top{
+        width: 95%;
+    }
+    header .battom{
+        width: 95%;
+    }
+    section .dis{
+        width: 95%;
+
+    }
+    section .videos{
+        width: 95%;
+    }
+    section .videos .item{
+        grid-template-columns: 1fr 1fr;
+    
+    }
+}
+
